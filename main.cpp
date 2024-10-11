@@ -1,7 +1,19 @@
-#include <stdio.h>
+#include <raylib.h>
 
 int main()
 {
-    printf("Hello, World!\n");
+    InitWindow(1280, 720, "Alien Game");
+    SetTargetFPS(60);
+
+    while(!WindowShouldClose())
+    {
+        BeginDrawing();
+
+        ClearBackground(LIGHTGRAY);
+        
+        EndDrawing();
+    }
+    
+    CloseWindow();
     return 0;
 }

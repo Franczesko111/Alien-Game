@@ -1,5 +1,5 @@
-INCLUDE_PATH = raylib/
-LIBRARY_PATH = libraylib.a
+INCLUDE_PATH = C:/raylib/raylib/src/
+LIBRARY_PATH = C:/raylib/raylib/src/libraylib.a
 SOURCE_FILES = main.cpp
 ARGUMENTS = -Wno-missing-braces -Wall
 PRECOMPILED_HEADER_PATH = source/include/common
