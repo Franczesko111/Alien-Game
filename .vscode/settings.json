@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+       ".gitignore": true,
+       "LICENSE": true,
+       "*.md": false,
+        "*.exe": true
+    }
+}

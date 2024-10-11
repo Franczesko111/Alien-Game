@@ -1,0 +1,1 @@
+You, an alien, want to see the outer space, but unfortunately crashed on some planet. The ship is broken, but you are already far away! Find materials on different planets and travel further to get to your life destination.
