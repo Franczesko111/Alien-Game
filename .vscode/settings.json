@@ -2,7 +2,7 @@
     "files.exclude": {
        ".gitignore": true,
        "LICENSE": true,
-       "*.md": false,
+       "*.md": true,
         "*.exe": true
     }
 }
