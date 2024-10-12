@@ -10,4 +10,7 @@ class Player
     
     private:
         int x, y;
+        _G::Spritesheet spr;
+
+        void Spritesheet();
 };

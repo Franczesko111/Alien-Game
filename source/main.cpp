@@ -2,8 +2,8 @@
 
 int main()
 {
-    InitWindow(1280, 720, "Ghost Alien Game");
-    SetTargetFPS(60);
+    InitWindow(_G::GAME_WIDTH, _G::GAME_HEIGHT, _G::GAME_TITLE);
+    SetTargetFPS(_G::GAME_FPS);
 
     _G::LoadTextures();
     Game game;

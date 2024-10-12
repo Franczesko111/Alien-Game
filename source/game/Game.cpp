@@ -19,4 +19,6 @@ void Game::Draw()
 void Game::Update()
 {
     player->Update();
+
+    if(IsKeyPressed(KeyboardKey::KEY_F)) ToggleBorderlessWindowed();
 }
