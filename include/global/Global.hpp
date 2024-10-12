@@ -1,6 +1,15 @@
 #pragma once
 #include <raylib.h>
 
+typedef short               int8;
+typedef unsigned short      uint8;
+typedef int                 int16;
+typedef unsigned int        uint16;
+typedef long                int32;
+typedef unsigned long       uint32;
+typedef long long           int64;
+typedef unsigned long long  uint64;
+
 namespace _G
 {
     inline constexpr int GAME_WIDTH = 320;
@@ -30,7 +39,7 @@ namespace _G
     /* Functions to load, unload data (textures, sounds, etc.) */
     inline void LoadData()
     {
-        Texture::player_texture = LoadTexture("assets/images/cubert.png");
+        Texture::player_texture = LoadTexture("assets/images/alien-ss.png");
 
         Image font_image = LoadImage("assets/fonts/Munro.ttf");
         ImageFormat(&font_image, PIXELFORMAT_UNCOMPRESSED_GRAYSCALE);

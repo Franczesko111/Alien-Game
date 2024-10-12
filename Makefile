@@ -17,7 +17,7 @@ all_mac: mac run
 win:
 	g++ $(SOURCE_FILES) -o $(PROGRAM_NAME) -include $(PRECOMPILED_HEADER_PATH)/ALL.hpp $(ARGUMENTS) -std=c++$(CPP_VERSION) -I $(INCLUDE_PATH) -I $(SOURCE_INCLUDE_PATH) -L $(INCLUDE_PATH) -lraylib -lopengl32 -lgdi32 -lwinmm
 win_fast:
-	g++ -O2 $(SOURCE_FILES) -o $(PROGRAM_NAME) $(ARGUMENTS) -std=c++$(CPP_VERSION) -I $(INCLUDE_PATH) -I $(SOURCE_INCLUDE_PATH) -L $(INCLUDE_PATH) -lraylib -lopengl32 -lgdi32 -lwinmm
+	g++ -static -O2 $(SOURCE_FILES) -o $(PROGRAM_NAME) $(ARGUMENTS) -std=c++$(CPP_VERSION) -I $(INCLUDE_PATH) -I $(SOURCE_INCLUDE_PATH) -L $(INCLUDE_PATH) -lraylib -lopengl32 -lgdi32 -lwinmm
 
 mac:
 	time g++ $(ARGUMENTS) -include $(PRECOMPILED_HEADER_PATH)/ALL.hpp -I $(INCLUDE_PATH) $(SOURCE_FILES) -std=c++$(CPP_VERSION)  -L $(INCLUDE_PATH) -framework CoreVideo -framework IOKit -framework Cocoa -framework GLUT -framework OpenGL $(INCLUDE_PATH)$(LIBRARY_PATH) -o $(PROGRAM_NAME)

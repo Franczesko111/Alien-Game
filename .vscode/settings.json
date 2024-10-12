@@ -6,6 +6,7 @@
         "*.exe": true
     },
     "files.associations": {
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "xutility": "cpp"
     }
 }

@@ -10,6 +10,8 @@ int main()
     Game game;
     RenderTexture render_texture = LoadRenderTexture(GetScreenWidth(), GetScreenHeight());
 
+    ToggleBorderlessWindowed();
+
     while(!WindowShouldClose())
     {
         BeginTextureMode(render_texture);
