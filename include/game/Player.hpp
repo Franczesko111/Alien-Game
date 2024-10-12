@@ -1,6 +1,5 @@
 #pragma once
 #include <global/Global.hpp>
-#include <iostream>
 
 constexpr uint8 PLAYER_SIZE = 16;
 
@@ -29,4 +28,5 @@ class Player
 
         void Spritesheet();
         void Animate(float duration, uint8 start_frame, uint8 end_frame);
+        void UpdateAnimData(Player::State state, uint8 anim);
 };

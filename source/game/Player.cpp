@@ -11,7 +11,7 @@ Player::Player()
 /* PUBLIC */
 void Player::Draw()
 {
-    DrawTexturePro(_G::Texture::player_texture, spr.source, spr.dest, {0, 0}, 0.0f, WHITE);
+    DrawTexturePro(_G::Texture::player_texture, spr.source, spr.dest, spr.origin, 0.0f, WHITE);
 }
 
 void Player::Update()
@@ -27,18 +27,10 @@ void Player::Update()
     else                        { side = 0; dir = 1; }
 
     if(x_trigger != 0 || y_trigger != 0) {
-        if(state != Player::State::MOVING) {
-            anim = 1;
-            timer = 0.0f;
-            state = Player::State::MOVING;
-        }
+        UpdateAnimData(Player::State::MOVING, 1);
     }
     else {
-        if(state != Player::State::IDLE) {
-            anim = 0;
-            timer = 0.0f;
-            state = Player::State::IDLE;
-        }
+        UpdateAnimData(Player::State::IDLE, 0);
     }
 
     switch(state)
@@ -55,8 +47,6 @@ void Player::Spritesheet()
 {
     spr.source = {(float)PLAYER_SIZE * (frame + side), (float)PLAYER_SIZE * anim, (float)PLAYER_SIZE * dir, PLAYER_SIZE};
     spr.dest = {(float)x, (float)y, spr.source.width * dir, spr.source.height};
-
-    std::cout << spr.source.x << " " << spr.source.y << " " << spr.source.width << " " << spr.source.height << std::endl;
 }
 
 void Player::Animate(float duration, uint8 start_frame, uint8 end_frame)
@@ -71,5 +61,14 @@ void Player::Animate(float duration, uint8 start_frame, uint8 end_frame)
         timer = duration;
         frame++;
         if(frame == end_frame) frame = start_frame;
+    }
+}
+
+void Player::UpdateAnimData(Player::State state, uint8 anim)
+{
+    if(this->state != state) {
+        this->anim = anim;
+        timer = 0.0f;
+        this->state = state;
     }
 }
