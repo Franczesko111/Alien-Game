@@ -36,7 +36,7 @@ void Player::Update()
     switch(state)
     {
         case Player::State::MOVING: { Animate(0.3f, 0, 2); break; }
-        default: { Animate(0.3f, 0, 2); break; }
+        default: { Animate(0.6f, 0, 2); break; }
     }
 
     Spritesheet();
