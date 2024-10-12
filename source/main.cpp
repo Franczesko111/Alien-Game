@@ -7,20 +7,30 @@ int main()
 
     _G::LoadTextures();
     Game game;
+    RenderTexture render_texture = LoadRenderTexture(GetScreenWidth(), GetScreenHeight());
 
     while(!WindowShouldClose())
     {
-        BeginDrawing();
-
-            game.Draw();
+        BeginTextureMode(render_texture);
+            game.Update();
 
             ClearBackground(LIGHTGRAY);
 
-            game.Update();
+            game.Draw();
+        EndTextureMode();
 
+        BeginDrawing();
+            DrawTexturePro(
+                render_texture.texture,
+                Rectangle{ 0, 0, static_cast<float>(render_texture.texture.width), static_cast<float>(-render_texture.texture.height) },
+                Rectangle{ 0, 0, static_cast<float>(GetScreenWidth()), static_cast<float>(GetScreenHeight()) },
+                Vector2{ 0, 0 },
+                0,
+                WHITE);
         EndDrawing();
     }
 
+    UnloadRenderTexture(render_texture);
     _G::UnloadTextures();
     CloseWindow();
     return 0;

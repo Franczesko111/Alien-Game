@@ -10,6 +10,5 @@ class Game
         void Update();
     
     private:
-        RenderTexture render_texture = LoadRenderTexture(GetScreenWidth(), GetScreenHeight());
         Player *player;
 };

@@ -3,10 +3,10 @@
 
 namespace _G
 {
-    inline constexpr int GAME_WIDTH = 1280;
-    inline constexpr int GAME_HEIGHT = 720;
+    inline constexpr int GAME_WIDTH = 320;
+    inline constexpr int GAME_HEIGHT = 180;
     inline constexpr int GAME_FPS = 60;
-    const char* GAME_TITLE = "Ghost Alien Game";
+    inline const char* GAME_TITLE = "Ghost Alien Game";
 
 
     /* Premade variables/classes to use */
