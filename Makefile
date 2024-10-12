@@ -1,7 +1,7 @@
 INCLUDE_PATH = C:/raylib/raylib/src/
 SOURCE_INCLUDE_PATH = include/
 LIBRARY_PATH = C:/raylib/raylib/src/libraylib.a
-SOURCE_FILES = source/game/*.cpp
+SOURCE_FILES = source/main.cpp source/game/*.cpp
 ARGUMENTS = -Wno-missing-braces -Wall
 PRECOMPILED_HEADER_PATH = include/all
 PROGRAM_NAME = game
