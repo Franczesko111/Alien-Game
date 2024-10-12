@@ -2,6 +2,7 @@
 
 int main()
 {
+    SetConfigFlags(FLAG_VSYNC_HINT);
     InitWindow(_G::GAME_WIDTH, _G::GAME_HEIGHT, _G::GAME_TITLE);
     SetTargetFPS(_G::GAME_FPS);
 
