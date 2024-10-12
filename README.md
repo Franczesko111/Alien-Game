@@ -1,1 +1,1 @@
-You, an alien, want to see the outer space, but unfortunately crashed on some planet. The ship is broken, but you are already far away! Find materials on different planets and travel further to get to your life destination.
+You are an alien ghost hunter! Traverse through haunted mansions in outer space, catch ghosts and be the best of the best!
