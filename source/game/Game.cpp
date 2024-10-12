@@ -13,7 +13,7 @@ Game::~Game()
 void Game::Draw()
 {
     player->Draw();
-    DrawFPS(10, 10);
+    DrawTextEx(_G::font, TextFormat("FPS: %i", GetFPS()), {4, 3}, 10, 1, GREEN);
 }
 
 void Game::Update()

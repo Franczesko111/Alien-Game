@@ -6,7 +6,7 @@ int main()
     InitWindow(_G::GAME_WIDTH, _G::GAME_HEIGHT, _G::GAME_TITLE);
     SetTargetFPS(_G::GAME_FPS);
 
-    _G::LoadTextures();
+    _G::LoadData();
     Game game;
     RenderTexture render_texture = LoadRenderTexture(GetScreenWidth(), GetScreenHeight());
 
@@ -32,7 +32,7 @@ int main()
     }
 
     UnloadRenderTexture(render_texture);
-    _G::UnloadTextures();
+    _G::UnloadData();
     CloseWindow();
     return 0;
 }
